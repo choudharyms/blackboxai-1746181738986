@@ -1,69 +1,44 @@
 
-Built by https://www.blackbox.ai
-
----
-
-```markdown
 # Perplexity Browser
 
-A minimal Electron desktop browser with Perplexity AI as the default search engine.
-
-## Project Overview
-
-Perplexity Browser is a lightweight web browser built using Electron that is designed to provide a seamless browsing experience with Perplexity AI integrated as the default search engine. This project aims to deliver a simple yet functional browsing solution for users who prefer AI-driven search results.
-
-## Installation
-
-To set up the Perplexity Browser on your local machine, follow these steps:
-
-1. **Clone the repository:**
-   ```bash
-   git clone https://github.com/yourusername/perplexity-browser.git
-   cd perplexity-browser
-   ```
-
-2. **Install dependencies:**
-   Ensure you have Node.js installed, then run:
-   ```bash
-   npm install
-   ```
-
-3. **Start the application:**
-   After installation, you can launch the browser using:
-   ```bash
-   npm start
-   ```
-
-## Usage
-
-Once the application is running, you will be greeted with a simple browser interface. Enter your search queries in the address bar, and the results will be fetched using Perplexity AI as the default search engine. 
-
-You can navigate through web pages as you would with any other browser.
+A minimal Electron desktop browser application with Perplexity AI as the default search engine.
 
 ## Features
 
-- Minimalistic interface
-- Perplexity AI as the default search engine
-- Built with Electron for cross-platform compatibility
+- Search using Perplexity AI directly from the browser search bar.
+- Displays search results inside the app using a webview.
+- Modern UI styled with Tailwind CSS, Google Fonts, and Font Awesome.
 
-## Dependencies
+## Requirements
 
-This project uses the following dependencies:
+- Node.js (v16 or higher recommended)
+- npm (Node package manager)
 
-- **Electron:** ^25.3.1
-  - A framework for building cross-platform desktop applications with web technologies.
-  
-For the complete dependencies, refer to the [package.json](./package.json) file.
+## Installation
 
-## Project Structure
+1. Clone the repository or download the source code.
+2. Navigate to the project directory.
+3. Run `npm install` to install dependencies.
 
-```plaintext
-perplexity-browser/
-├── package.json  # Project configuration and dependencies
-└── main.js       # Main entry point of the Electron application
+## Running the App
+
+Run the following command to start the Electron app:
+
+```bash
+npm start
 ```
+
+## Usage
+
+- Enter your search query in the search bar.
+- Press Enter or click the Search button.
+- The search results from Perplexity AI will load inside the app.
+
+## Notes
+
+- This is a minimal browser focused on Perplexity AI search.
+- The app uses Electron's webview tag to display search results.
 
 ## License
 
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
-```
+MIT License
