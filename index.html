@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Perplexity Browser</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+  </style>
+</head>
+<body class="bg-gray-50 h-screen flex flex-col">
+  <header class="bg-white shadow p-4 flex items-center space-x-4">
+    <i class="fas fa-search text-gray-600 text-xl"></i>
+    <input
+      id="searchInput"
+      type="text"
+      placeholder="Search with Perplexity..."
+      class="flex-grow border border-gray-300 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+      autofocus
+    />
+    <button
+      id="searchBtn"
+      class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition"
+      aria-label="Search"
+    >
+      Search
+    </button>
+  </header>
+  <main class="flex-grow">
+    <webview
+      id="webview"
+      src="https://www.perplexity.ai/"
+      class="w-full h-full"
+      style="border:none;"
+      allowpopups
+    ></webview>
+  </main>
+
+  <script>
+    const searchInput = document.getElementById('searchInput');
+    const searchBtn = document.getElementById('searchBtn');
+    const webview = document.getElementById('webview');
+
+    function searchPerplexity(query) {
+      if (!query) return;
+      const url = 'https://www.perplexity.ai/search?q=' + encodeURIComponent(query);
+      webview.src = url;
+    }
+
+    searchBtn.addEventListener('click', () => {
+      searchPerplexity(searchInput.value);
+    });
+
+    searchInput.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter') {
+        searchPerplexity(searchInput.value);
+      }
+    });
+  </script>
+</body>
+</html>
