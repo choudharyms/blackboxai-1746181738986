@@ -1,0 +1,21 @@
+{
+  "name": "perplexity-browser",
+  "version": "1.0.0",
+  "description": "A minimal Electron desktop browser with Perplexity AI as the default search engine",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "dependencies": {
+    "electron": "^25.3.1"
+  },
+  "devDependencies": {},
+  "keywords": [
+    "electron",
+    "browser",
+    "perplexity",
+    "search"
+  ],
+  "author": "",
+  "license": "MIT"
+}
